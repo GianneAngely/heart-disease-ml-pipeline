@@ -1,29 +1,33 @@
-# Eksperimen_SML_Gianne-Angely
+# Heart Disease ML Pipeline
 
-Repository ini berisi eksperimen machine learning untuk dataset Heart Disease UCI sebagai bagian dari submission kelas Membangun Sistem Machine Learning.
+An **automated data-preprocessing pipeline** for the Heart Disease UCI dataset, wired up with **GitHub Actions** so the data prep re-runs on every push — the data-engineering foundation of an MLOps workflow.
 
-## Struktur Folder
+<p align="center">
+  <img src="screenshots/correlation-heatmap.png" width="680" alt="Correlation heatmap of the heart disease features against the target">
+</p>
 
-```
-Eksperimen_SML_Gianne-Angely
-├── .github/workflows/
-│   └── preprocessing.yml
-├── heart_disease_raw/
-│   └── heart.csv
-├── preprocessing/
-│   ├── Eksperimen_Gianne-Angely.ipynb
-│   ├── automate_Gianne-Angely.py
-│   └── heart_disease_preprocessing/
-│       └── heart_preprocessed.csv
-```
+## Overview
 
-## Dataset
+- **Dataset:** Heart Disease UCI — 303 samples, 14 features (age, chest-pain type, cholesterol, max heart rate, etc.) with a binary `target`.
+- **Exploration:** distribution, correlation, and outlier analysis to understand the features before modelling.
+- **Automated preprocessing:** `automate_*.py` turns the raw `heart.csv` into a clean, model-ready `heart_preprocessed.csv`.
+- **CI:** `.github/workflows/preprocessing.yml` runs the pipeline automatically on GitHub Actions.
 
-Dataset yang digunakan adalah **Heart Disease UCI** dari Kaggle, dengan 303 sampel dan 14 fitur.
+<p align="center">
+  <img src="screenshots/feature-distributions.png" width="720" alt="Distribution histograms of all features">
+</p>
 
-## Cara Menjalankan Preprocessing Otomatis
+## Run it
 
 ```bash
 pip install -r preprocessing/requirements.txt
-python preprocessing/automate_Gianne-Angely.py
+python preprocessing/automate_*.py
 ```
+
+## Tech stack
+
+Python · pandas · scikit-learn · GitHub Actions · Matplotlib · seaborn
+
+## Notes
+
+Submission for Dicoding's *Membangun Sistem Machine Learning* (MLOps).
