@@ -10,7 +10,7 @@ An **automated data-preprocessing pipeline** for the Heart Disease UCI dataset, 
 
 - **Dataset:** Heart Disease UCI — 303 samples, 14 features (age, chest-pain type, cholesterol, max heart rate, etc.) with a binary `target`.
 - **Exploration:** distribution, correlation, and outlier analysis to understand the features before modelling.
-- **Automated preprocessing:** `automate_*.py` turns the raw `heart.csv` into a clean, model-ready `heart_preprocessed.csv`.
+- **Automated preprocessing:** `automate.py` turns the raw `heart.csv` into a clean, model-ready `heart_preprocessed.csv`.
 - **CI:** `.github/workflows/preprocessing.yml` runs the pipeline automatically on GitHub Actions.
 
 <p align="center">
@@ -21,7 +21,7 @@ An **automated data-preprocessing pipeline** for the Heart Disease UCI dataset, 
 
 ```bash
 pip install -r preprocessing/requirements.txt
-python preprocessing/automate_*.py
+python preprocessing/automate.py
 ```
 
 ## Tech stack

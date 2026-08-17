@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'heart_disease_raw/**'
-      - 'preprocessing/automate_Gianne-Angely.py'
+      - 'preprocessing/automate.py'
   workflow_dispatch:
 
 permissions:
@@ -34,7 +34,7 @@ jobs:
 
       - name: Run preprocessing script
         run: |
-          python preprocessing/automate_Gianne-Angely.py
+          python preprocessing/automate.py
 
       - name: Upload preprocessed dataset
         uses: actions/upload-artifact@v4
